@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Earnings Calculator</title>
+    <style>
+        .calculator {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section h3 {
+            flex: 1;
+        }
+        .output {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blog Post Earnings Calculator</h1>
+    <div class="calculator">
+        <div class="section">
+            <h3>Expected RPM of your blog niche ($):</h3>
+            <input type="number" id="rpm" min="1" max="100" value="20" required>
+        </div>
+        <div class="section">
+            <h3>Expected monthly traffic:</h3>
+            <input type="number" id="traffic" min="100" max="10000" step="100" value="500" required>
+        </div>
+        <div class="section">
+            <h3>Number of months the article ranks and remains relevant:</h3>
+            <input type="number" id="months" min="3" max="24" value="12" required>
+        </div>
+        <div class="section">
+            <h3>Expected profit margin percentage (%):</h3>
+            <input type="number" id="profitMargin" min="20" max="80" step="10" value="50" required>
+        </div>
+        <div class="section output">
+            <h3>Expected Lifetime Earnings ($):</h3>
+            <span id="lifetimeEarnings"></span>
+        </div>
+        <div class="section output">
+            <h3>Your spend on blog post should be ($):</h3>
+            <span id="spend"></span>
+        </div>
+        <button onclick="calculateEarnings()">Calculate</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
