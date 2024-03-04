@@ -5,7 +5,7 @@ function calculateEarnings() {
   const profitMargin = parseFloat(document.getElementById("profitMargin").value) / 100;
 
   const lifetimeEarnings = (rpm * traffic * months) / 1000;
-  const spend = lifetimeEarnings / (1 - profitMargin);
+  const spend = lifetimeEarnings * (1 - profitMargin);
 
   document.getElementById("lifetimeEarnings").textContent = lifetimeEarnings.toFixed(2);
   document.getElementById("spend").textContent = spend.toFixed(2);
